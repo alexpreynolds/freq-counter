@@ -27,7 +27,8 @@ extern "C" {
 #include <getopt.h>
 #include <sys/stat.h>
 
-#define FREQ_COUNTER_LINE_MAX 248956422
+/* longest chromosome in hg38, times four */
+#define FREQ_COUNTER_LINE_MAX 995825688
 
 namespace freq_counter
 {
