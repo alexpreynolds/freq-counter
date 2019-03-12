@@ -98,7 +98,7 @@ freq_counter::FreqCounter::process_fasta_record(char* header, char* sequence)
       size_t hits = std::count(mer.begin(), mer.end(), *iter);
       count += hits;        
     }
-    std::cout << header << '\t' << position << '\t' << position + this->step() << '\t' << count << std::endl;
+    std::cout << header << '\t' << position << '\t' << position + this->step() << '\t' << (float)count/this->span() << std::endl;
     for (int i = 0; i < this->step(); ++i) {
       window.pop_front();
       window.push_back(seq[position]);
